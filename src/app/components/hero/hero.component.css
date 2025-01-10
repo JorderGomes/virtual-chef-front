@@ -4,3 +4,14 @@
     color: var(--text-color);
     text-align: center;
 }
+
+.section-footer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-footer a {
+    color: var(--light-color);
+}
