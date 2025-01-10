@@ -1,0 +1,34 @@
+#site-footer {
+    background-color: #343a40;
+    color: #f8f9fa; 
+}
+
+#site-footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#site-footer p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+#site-footer .form-control {
+    background-color: var(--bg-gray-dark); 
+    color: var(--light-color); 
+    border: none;
+}
+
+#site-footer .form-control:focus {
+    border-color: var(--border-light);
+    box-shadow: 0 0 0 0.2rem var(--box-shadow-dark);
+}
+
+#site-footer .btn-primary {
+    background-color: var(--secondary-color); 
+    border: none;
+}
+
+#site-footer .btn-primary:hover {
+    background-color: var(--bg-gray-light); 
+}
