@@ -5,6 +5,13 @@ import { Injectable } from '@angular/core';
 })
 export class ScrollService {
   constructor() { }
+
+  isRecipeContentVisible = false;
+
+  revertRecipeContentVisibility(): void {
+    this.isRecipeContentVisible = !this.isRecipeContentVisible;
+  }
+
   scrollToSection(sectionId: string): void {
     const section = document.getElementById(sectionId);
     if (section) {

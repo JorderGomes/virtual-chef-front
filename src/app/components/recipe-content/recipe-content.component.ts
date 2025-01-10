@@ -3,13 +3,13 @@ import { ScrollService } from '../../services/scroll.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-empty-state',
+  selector: 'app-recipe-content',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './empty-state.component.html',
-  styleUrl: './empty-state.component.css'
+  templateUrl: './recipe-content.component.html',
+  styleUrl: './recipe-content.component.css'
 })
-export class EmptyStateComponent {
+export class RecipeContentComponent {
 
   constructor(public scrollService: ScrollService) {}
 

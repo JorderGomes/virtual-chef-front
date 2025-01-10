@@ -19,7 +19,7 @@ export class HeaderComponent {
     const file = input.files?.[0];
     this.fileName = file ? file.name : 'Nenhum arquivo selecionado';
 
-    // this.isRecipesHidden = false; // Exibe a lista de receitas
+    this.scrollService.revertRecipeContentVisibility();
     this.scrollService.scrollToSection('empty-state');
   }
 
