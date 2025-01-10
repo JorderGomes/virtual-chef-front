@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #D35400; 
+    --secondary-color: #F39C12 ; 
+    --accent-color:#27AE60; 
+    --light-color: #FDFEFE;
+    --text-color: #2C3E50; 
+
+    --bg-gray-dark: #495057; 
+    --bg-gray-light: #6C757D; 
+    --text-light: #F8F9FA; 
+    --border-light: #DFDF0E; 
+    --box-shadow-dark: rgba(223, 227, 14, 0.25); 
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+
+.red {
+    border:1px solid red;
+}
+
+section {
+    min-height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
