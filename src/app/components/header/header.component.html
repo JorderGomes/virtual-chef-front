@@ -7,7 +7,7 @@
         <label for="file-upload" class="custom-file-upload">
           <i class="fa fa-cloud-upload-alt"></i> Enviar Imagem
         </label>
-        <input id="file-upload" type="file" accept="image/*" />
-        <p id="file-name" class="file-name"></p>
+        <input id="file-upload" type="file" accept="image/*" (change)="onFileChange($event)" />
+        <p id="file-name" class="file-name">{{ fileName }}</p>
     </div>
 </div>

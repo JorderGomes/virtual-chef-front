@@ -9,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  fileName: string = 'Nenhum arquivo selecionado';
+
+  onFileChange(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    const file = input.files?.[0];
+    this.fileName = file ? file.name : 'Nenhum arquivo selecionado';
+
+    // this.isRecipesHidden = false; // Exibe a lista de receitas
+    // this.scrollToSection('recipes-list');
+  }
+
 }

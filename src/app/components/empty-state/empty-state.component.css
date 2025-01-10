@@ -1,0 +1,23 @@
+#empty-state {
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+#empty-state .empty-icon {
+    font-size: 4rem;
+    color: var(--primary-color, #374482);
+}
+#empty-state h2 {
+    font-size: 1.75rem;
+    color: #333;
+}
+#empty-state p {
+    font-size: 1rem;
+}
+#empty-state .btn {
+    background-color: var(--primary-color, #374482);
+    color: #fff;
+    border: none;
+}
+#empty-state .btn:hover {
+    background-color: var(--secondary-color, #6c757d);
+}
