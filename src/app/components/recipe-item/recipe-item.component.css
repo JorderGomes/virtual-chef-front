@@ -1,0 +1,61 @@
+.card {
+    margin: 10px 0;
+    padding: 15px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.text-secondary {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.list-group-item {
+    background-color: transparent; 
+    border: none; 
+    padding: 0.5rem 1rem; 
+}
+
+.card-text {
+    line-height: 1.8;
+    text-align: justify; 
+}
+
+.card-body {
+    padding: 2rem; 
+}
+
+.shadow-sm {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+} 
+
+/* 
+.recipe-card{
+    max-width: 800px;
+    width: 90%;
+    display: none;
+}
+
+.card {
+    border-radius: 10px; 
+    overflow: hidden; 
+    background-color: #fff; 
+}
+
+  
+.card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+*/

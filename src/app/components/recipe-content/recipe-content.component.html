@@ -1,3 +1,5 @@
 <section *ngIf="scrollService.isRecipeContentVisible" id="recipes-list" class="py-5">
-    <p>Lista de receitas</p>
+    <div class="recipes-content">
+        <app-recipe-item *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe-item>
+    </div>
 </section>
