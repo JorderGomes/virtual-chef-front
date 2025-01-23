@@ -1,3 +1,11 @@
+#recipes-list {
+    padding: 0;
+}
+
+#empty-recipes {
+    width: 100%;
+}
+
 .recipes-content {
     width: 96%;
     margin: auto;

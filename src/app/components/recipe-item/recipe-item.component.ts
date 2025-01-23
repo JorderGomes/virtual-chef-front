@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { Recipe } from '../../interfaces/recipe';
 
 @Component({
   selector: 'app-recipe-item',
@@ -10,6 +11,6 @@ import { Component, Input } from '@angular/core';
 })
 export class RecipeItemComponent {
 
-  @Input() recipe: { title: string; ingredients: string[]; preparation_method: string } | undefined;
+  @Input() recipe: Recipe | undefined;
 
 }

@@ -37,25 +37,3 @@
 .shadow-sm {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
 } 
-
-/* 
-.recipe-card{
-    max-width: 800px;
-    width: 90%;
-    display: none;
-}
-
-.card {
-    border-radius: 10px; 
-    overflow: hidden; 
-    background-color: #fff; 
-}
-
-  
-.card h3 {
-    margin: 0;
-    font-size: 18px;
-    color: #333;
-}
-
-*/

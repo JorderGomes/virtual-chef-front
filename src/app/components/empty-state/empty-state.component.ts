@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ScrollService } from '../../services/scroll.service';
 import { CommonModule } from '@angular/common';
+import { RecipeContentService } from '../../services/recipe-content.service';
 
 @Component({
   selector: 'app-empty-state',
@@ -11,6 +12,14 @@ import { CommonModule } from '@angular/common';
 })
 export class EmptyStateComponent {
 
-  constructor(public scrollService: ScrollService) {}
+  constructor(private recipeContentService: RecipeContentService, public scrollService: ScrollService) {}
+
+  // isVisible: boolean = false;
+  // ngOnInit(): void {
+  //   // Inscreve-se para receber atualizações das receitas
+  //   this.recipeContentService.recipes$.subscribe((recipes) => {
+  //     this.isVisible = recipes.length <= 0 ? false : true;
+  //   });
+  // }
 
 }
