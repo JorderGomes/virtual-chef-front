@@ -14,11 +14,19 @@ export class FooterComponent {
     const form = document.getElementById('feedback-form') as HTMLFormElement;
     const nameInput = (document.getElementById('feedback-name') as HTMLInputElement).value;
     const messageInput = (document.getElementById('feedback-message') as HTMLTextAreaElement).value;
+    const bodyStr = `O usuário ${nameInput} deixou esta mensagem: ${messageInput}. No projeto VirtualChef`;
+    console.log(bodyStr);
 
-    console.log(`O usuário ${nameInput} deixou esta mensagem: ${messageInput}`);
     form.reset();
     
-    // Aqui você pode adicionar lógica para enviar os dados ao servidor
+    const email = "jordernoveau@gmail.com";
+    const subject = encodeURIComponent("Avaliação do projeto VirtualChef");
+    const body = encodeURIComponent(bodyStr);
+
+    const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+
+    // Abre o cliente de email padrão
+    window.location.href = mailtoLink;
   }
 
 }

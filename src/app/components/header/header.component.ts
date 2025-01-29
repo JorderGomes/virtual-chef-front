@@ -42,7 +42,7 @@ export class HeaderComponent {
           this.recipeContentService.updateRecipes(recipes);
           console.log(this.scrollService.isRecipeContentVisible);
           this.scrollService.scrollToSection('recipe-content');
-          // this.scrollService.revertRecipeContentVisibility();  // Atualiza o RecipeContentComponent
+          // input.value = "";
         },
         error: (error) => {
           console.error('Erro ao processar o arquivo:', error);
