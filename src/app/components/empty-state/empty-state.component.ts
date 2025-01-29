@@ -14,12 +14,5 @@ export class EmptyStateComponent {
 
   constructor(private recipeContentService: RecipeContentService, public scrollService: ScrollService) {}
 
-  // isVisible: boolean = false;
-  // ngOnInit(): void {
-  //   // Inscreve-se para receber atualizações das receitas
-  //   this.recipeContentService.recipes$.subscribe((recipes) => {
-  //     this.isVisible = recipes.length <= 0 ? false : true;
-  //   });
-  // }
 
 }

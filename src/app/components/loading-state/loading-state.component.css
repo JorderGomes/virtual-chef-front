@@ -1,0 +1,15 @@
+#loading-state {
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+#loading-state .loading-icon {
+    font-size: 3rem;
+    color: var(--primary-color, #374482);
+}
+#loading-state h2 {
+    font-size: 1.75rem;
+    color: #333;
+}
+#loading-state p {
+    font-size: 1rem;
+}

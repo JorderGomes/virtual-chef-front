@@ -2,7 +2,7 @@
     padding: 0;
 }
 
-#empty-recipes {
+#empty-recipes, #loading-recipes {
     width: 100%;
 }
 

@@ -1,6 +1,7 @@
-<section id="recipes-list" class="">
-    <div *ngIf="recipes.length > 0" class="recipes-content">
+<section id="recipes-list">
+    <div *ngIf="recipesState === 'loaded'" class="recipes-content">
         <app-recipe-item *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe-item>
     </div>
-    <app-empty-state id="empty-recipes" *ngIf="recipes.length === 0"></app-empty-state>
+    <app-empty-state id="empty-recipes" *ngIf="recipesState === 'empty'"></app-empty-state>
+    <app-loading-state id="loading-recipes" *ngIf="recipesState === 'loading'"></app-loading-state>
 </section>

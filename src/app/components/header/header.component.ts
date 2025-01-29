@@ -27,7 +27,7 @@ export class HeaderComponent {
 
     if (file) {
       this.fileName = file.name;
-      this.scrollService.revertRecipeContentVisibility();
+      this.recipeContentService.setLoading(true); 
       this.scrollService.scrollToSection('empty-state');
 
       // Chama o primeiro endpoint e, em seguida, o segundo
