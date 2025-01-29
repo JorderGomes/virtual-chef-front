@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { environment } from '../../../environments/environment.development';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-footer',
@@ -12,6 +14,7 @@ export class FooterComponent {
   onSubmitFeedback(event: Event): void {
     event.preventDefault();
     const form = document.getElementById('feedback-form') as HTMLFormElement;
+    
     const nameInput = (document.getElementById('feedback-name') as HTMLInputElement).value;
     const messageInput = (document.getElementById('feedback-message') as HTMLTextAreaElement).value;
     const bodyStr = `O usuário ${nameInput} deixou esta mensagem: ${messageInput}. No projeto VirtualChef`;
@@ -19,14 +22,26 @@ export class FooterComponent {
 
     form.reset();
     
-    const email = "jordernoveau@gmail.com";
-    const subject = encodeURIComponent("Avaliação do projeto VirtualChef");
-    const body = encodeURIComponent(bodyStr);
+    const templateParams = {
+      name: nameInput,
+      message: messageInput,
+      project_name: "VirtualChef"
+    };
 
-    const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+    const serviceID = environment.serviceID;
+    const templateID = environment.templateID;
+    const publicKey = environment.publicKey;
 
-    // Abre o cliente de email padrão
-    window.location.href = mailtoLink;
+    emailjs.send(serviceID, templateID, templateParams, publicKey)
+      .then(response => {
+        console.log("Email enviado com sucesso!", response);
+        alert("Feedback enviado com sucesso!");
+        (document.getElementById('feedback-form') as HTMLFormElement).reset();
+      })
+      .catch(error => {
+        console.error("Erro ao enviar email:", error);
+        alert("Erro ao enviar o feedback. Tente novamente.");
+      });
   }
 
 }
