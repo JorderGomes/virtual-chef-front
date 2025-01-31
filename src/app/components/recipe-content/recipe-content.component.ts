@@ -35,6 +35,8 @@ export class RecipeContentComponent {
     this.recipeContentService.loading$.subscribe((isLoading) => {
       if (isLoading) {
         this.recipesState = "loading";
+      } else {
+        this.recipesState = "empty";
       }
     });
   }

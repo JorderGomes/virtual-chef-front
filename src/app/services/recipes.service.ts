@@ -22,5 +22,12 @@ export class RecipesService {
     return this.http.post<Recipe[]>(endpointUrl, { ingredients });
   }
 
+  generateRecipesByImage(file: File): Observable<Recipe[]> {
+    const endpointUrl: string = this.baseApiUrl + "/generate-recipe-by-image/";
+    const formData = new FormData();
+    formData.append('file', file);
+    return this.http.post<Recipe[]>(endpointUrl, formData);
+  }
+
   constructor(private http: HttpClient) { }
 }

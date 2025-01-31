@@ -28,33 +28,31 @@ export class HeaderComponent {
     if (file) {
       this.fileName = file.name;
       this.recipeContentService.setLoading(true); 
-      this.scrollService.scrollToSection('empty-state');
 
-      // Chama o primeiro endpoint e, em seguida, o segundo
-      this.recipesService.getIngredients(file).pipe(
-        switchMap(ingredients => {
-          console.log('Ingredientes obtidos:', ingredients);
-          return this.recipesService.getRecipes(ingredients);
-        })
-      ).subscribe({
+      this.scrollService.scrollToSection('recipes-list');
+      // this.scrollService.scrollToSection('loading-state');
+      console.time('Tempo da requisição'); // Inicia a contagem do tempo
+      // Chamada única para o novo endpoint
+      this.recipesService.generateRecipesByImage(file).subscribe({
         next: (recipes) => {
+          console.timeEnd('Tempo da requisição');
           console.log('Receitas obtidas:', recipes);
           this.recipeContentService.updateRecipes(recipes);
-          console.log(this.scrollService.isRecipeContentVisible);
           this.scrollService.scrollToSection('recipe-content');
-          // input.value = "";
         },
         error: (error) => {
+          this.recipeContentService.setLoading(false);
+          console.timeEnd('Tempo da requisição');
           console.error('Erro ao processar o arquivo:', error);
           alert('Erro ao processar o arquivo. Por favor, tente novamente.');
         }
       });
+
     } 
     
     else {
       this.fileName = 'Nenhum arquivo selecionado';
     }
-
   }
 
 }
